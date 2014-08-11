@@ -1,0 +1,19 @@
+# MPLAB IDE generated this makefile for use with Microsoft `nmake'.
+# Project: LCD.mcp
+# Date: Sun Feb 03 21:33:11 2013
+
+AS = MPASMWIN.exe
+CC = mcc18.exe
+LD = mplink.exe
+AR = mplib.exe
+RM = del
+
+"LCD.cof" : "spi.o"
+	$(LD) /p18F87J11 /l"C:\Program Files\Microchip\mplabc18\v3.40\lib" "spi.o" /u_CRUNTIME /z__MPLAB_BUILD=1 /o"LCD.cof" /M"LCD.map" /W
+
+"spi.o" : "spi.c" "..\..\..\..\..\Program Files\Microchip\mplabc18\v3.40\h\spi.h" "..\..\..\..\..\Program Files\Microchip\mplabc18\v3.40\h\delays.h" "spi.c" "..\..\..\..\..\Program Files\Microchip\mplabc18\v3.40\h\p18F87J11.h" "..\..\..\..\..\Program Files\Microchip\mplabc18\v3.40\h\pconfig.h" "..\..\..\..\..\Program Files\Microchip\mplabc18\v3.40\h\p18cxxx.h" "..\..\..\..\..\Program Files\Microchip\mplabc18\v3.40\h\p18f87j11.h"
+	$(CC) -p=18F87J11 "spi.c" -fo="spi.o" -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+
+"clean" : 
+	$(RM) "spi.o" "LCD.cof" "LCD.hex"
+

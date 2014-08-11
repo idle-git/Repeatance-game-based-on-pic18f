@@ -1,0 +1,6 @@
+/*debug aid*/
+LCDLine_1(); 
+string_write(6);
+LCDLine_2(); 
+string_write(4);
+Delay10KTCYx(255);
